@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyfnb6nkg1sjr"]
+
+[ext_resource type="Texture2D" uid="uid://b3pgp1one3jxo" path="res://assets/sprites/platforms.png" id="1_60sga"]
+[ext_resource type="Script" path="res://scripts/platform_lra.gd" id="1_leu7u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_030l2"]
+size = Vector2(32, 9)
+
+[node name="PlatformLRA" type="CharacterBody2D"]
+script = ExtResource("1_leu7u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_60sga")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 9)
+
+[node name="RayCast2DL" type="RayCast2D" parent="."]
+target_position = Vector2(-18, 0)
+
+[node name="RayCast2DR" type="RayCast2D" parent="."]
+target_position = Vector2(18, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_030l2")
+one_way_collision = true
