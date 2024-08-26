@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://c8qhd8u3nux0r"]
+[gd_scene load_steps=18 format=3 uid="uid://c8qhd8u3nux0r"]
 
 [ext_resource type="PackedScene" uid="uid://duqvmpm2qxuij" path="res://scenes/player.tscn" id="1_qvpk7"]
-[ext_resource type="Script" path="res://assets/sprites/game_manager.gd" id="1_w81xm"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_w81xm"]
 [ext_resource type="Texture2D" uid="uid://xbgt4hcq1sg3" path="res://assets/sprites/world_tileset.png" id="2_ec2tc"]
 [ext_resource type="PackedScene" uid="uid://elgotynx8txm" path="res://scenes/platform.tscn" id="3_8q4sg"]
 [ext_resource type="PackedScene" uid="uid://b7xi7k1b6pr0p" path="res://scenes/coin.tscn" id="4_eurw6"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://ccdhcgmaycht6" path="res://assets/fonts/PixelOperator8.ttf" id="7_5a6nb"]
 [ext_resource type="FontFile" uid="uid://se6toityp68m" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_t063p"]
 [ext_resource type="PackedScene" uid="uid://dyfnb6nkg1sjr" path="res://scenes/platform_lra.tscn" id="10_vi42a"]
+[ext_resource type="PackedScene" uid="uid://1u7bbbstfdu2" path="res://scenes/purple_slime.tscn" id="11_xwwax"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jij5b"]
 texture = ExtResource("2_ec2tc")
@@ -247,7 +248,7 @@ position = Vector2(88, -46)
 position = Vector2(201, 68)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("4_eurw6")]
-position = Vector2(216, 67)
+position = Vector2(216, 68)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("4_eurw6")]
 position = Vector2(471, 34)
@@ -351,3 +352,6 @@ horizontal_alignment = 1
 
 [node name="PlatformLRA" parent="." instance=ExtResource("10_vi42a")]
 position = Vector2(242, 101)
+
+[node name="purple_slime" parent="." instance=ExtResource("11_xwwax")]
+position = Vector2(167, 0)
