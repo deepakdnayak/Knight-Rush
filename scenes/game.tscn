@@ -219,6 +219,21 @@ _data = {
 "move": SubResource("Animation_wsdo3")
 }
 
+[sub_resource type="Animation" id="Animation_8h6nv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1088, 52)]
+}
+
 [sub_resource type="Animation" id="Animation_7w5w4"]
 resource_name = "move_tb"
 length = 1.5
@@ -236,7 +251,13 @@ tracks/0/keys = {
 "values": [Vector2(1088, 52), Vector2(1088, -11)]
 }
 
-[sub_resource type="Animation" id="Animation_8h6nv"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_12mf3"]
+_data = {
+"RESET": SubResource("Animation_8h6nv"),
+"move_tb": SubResource("Animation_7w5w4")
+}
+
+[sub_resource type="Animation" id="Animation_b0rah"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -248,13 +269,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1088, 52)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_12mf3"]
-_data = {
-"RESET": SubResource("Animation_8h6nv"),
-"move_tb": SubResource("Animation_7w5w4")
+"values": [Vector2(1493, 91)]
 }
 
 [sub_resource type="Animation" id="Animation_o1k2s"]
@@ -274,21 +289,6 @@ tracks/0/keys = {
 "values": [Vector2(1493, 91), Vector2(1493, -113)]
 }
 
-[sub_resource type="Animation" id="Animation_b0rah"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1493, 91)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xjl2u"]
 _data = {
 "RESET": SubResource("Animation_b0rah"),
@@ -302,14 +302,16 @@ unique_name_in_owner = true
 script = ExtResource("1_w81xm")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 2083.0
-offset_top = -158.0
-offset_right = 2183.0
-offset_bottom = -132.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 26.0
+grow_horizontal = 0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
 theme_override_fonts/font = ExtResource("9_t063p")
 theme_override_font_sizes/font_size = 8
-text = "You collected X coins."
+text = "Coins : k"
 horizontal_alignment = 1
 autowrap_mode = 2
 
